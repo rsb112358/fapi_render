@@ -11,5 +11,5 @@ async def root():
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
-    item_ret = item_id * 4
+    item_ret = item_id ** 2
     return {"item_id": item_ret, "q": q}
